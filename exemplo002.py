@@ -4,11 +4,11 @@
 # O tipo de dados int trabalha com inteiros positivos ou negativos
 idade = int(input('Digite a sua idade em anos: '))
 
-# A estrutura if-elif-else analisa condições lógicas
+# Estrutura de decisão if-elif-else
 # Dentro de estruturas, a indentação (em espaços ou tabs) é obrigatória e cumulativa
-# Operadores lógicox aceitos em Python: == (igual), != (diferente), < (menor), > (maior), <= (menor ou igual) e >= (maior ou igual)
+# Operadores lógicox aceitos no Python 3: == (igual), != (diferente), < (menor), > (maior), <= (menor ou igual) e >= (maior ou igual)
 if idade < 0:
-	# Este bloco é executado quando a condição acima for verdadeira (valor booleano True); depois dela, as demais condições da estrutura são ignoradas
+	# Este bloco é executado quando a condição acima for verdadeira (valor booleano True) e as demais condições da estrutura são ignoradas
 	print('Idade inválida. ')
 elif idade < 18:
 	print('Menor de idade. ')
