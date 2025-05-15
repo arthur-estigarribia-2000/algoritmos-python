@@ -1,13 +1,13 @@
 # Funções
 # Exemplo: média de notas escolares
 
-# Estrutura def
+# Estrutura de função def
 # Permite a reutilização de código que seria repetido muitas vezes
 # Pode ter vários parâmetros, mas apenas um retorno
-# Indentação obrigatória e cumulativa
+# Indentação obrigatória e cumulativa (com outras estruturas)
 def media(nota1, nota2, nota3):
-	soma = float(nota1) + float(nota2) + float(nota3)
-	razao = float(soma) / 3
+	soma = round(float(nota1) + float(nota2) + float(nota3), 1)
+	razao = round(float(soma) / 3, 1)
 	
 	# O método round(numero, casas) é recomendado para evitar erros de máquina numa operação decimal
 	# Pode ter de 0 a 15 casas decimais
