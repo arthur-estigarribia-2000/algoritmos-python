@@ -1,5 +1,5 @@
 # Repetição
-# Exemplo: montagem da tabuada multiplicativa de um inteiro
+# Exemplo: tabuada multiplicativa
 
 numero = int(input('Digite um inteiro: '))
 
@@ -8,7 +8,7 @@ i = 0
 
 # Estrutura de repetição while
 # O bloco é executado enquanto a condição for verdadeira, parando apenas quando for falsa
-# Indentação obrigatória
+# Indentação obrigatória e cumulativa
 while i <= 10:
 	resultado = i * numero
 
