@@ -1,5 +1,4 @@
-# Decisão
-# Exemplo: maioridade penal no Brasil
+# Decisão - Exemplo: maioridade penal no Brasil
 
 # O tipo de dados int trabalha com inteiros positivos ou negativos
 idade = int(input('Digite a idade em anos: '))
@@ -11,8 +10,8 @@ if idade < 0:
 	# Este bloco é executado quando a condição acima for verdadeira (valor booleano True) e as demais condições da estrutura são ignoradas
 	print('Idade inválida. ')
 elif idade < 18:
-	# Se o anterior for falso, mas este for verdadeiro, executa este bloco e ignora os posteriores
+	# Se a condição do bloco anterior for falsa, mas esta for verdadeira, executa este bloco e ignora os posteriores
 	print('Menor de idade. ')
 else:
-	# Este bloco e executado quando todas as condições forem falsas (valor booleano False)
+	# O bloco else é executado quando todas as condições anteriores forem falsas (valor booleano False)
 	print('Maior de idade. ')
