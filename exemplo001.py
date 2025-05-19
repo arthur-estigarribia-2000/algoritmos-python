@@ -1,16 +1,15 @@
-# Operações
-# Exemplo: porcentagem
+# Operações - Exemplo: porcentagem
 
 # O método input(mensagem) consiste em obter os dados digitados no console (linha de comando)
 # É necessário converter o valor obtido para ponto flutuante decimal (tipo float) para efetuar operações numéricas usando float(valor)
-valor = float(input('Digite o valor total ou inicial: '))
-porcentagem = float(input('Digite o percentual: '))
+valor = float(input('Digite o valor de base (total ou inicial): '))
+porcentagem = float(input('Digite a porcentagem (taxa): '))
 
 # Variável auxiliar que será usada em breve
 precisao = 2
 
-# Operadores numericos aceitos no Python 3: + (soma ou concatenação), - (subtração), * (multiplicação), / (quociente da divisão), % (rest da divisãoo) e ** (potência)
-# O método nativo round(numero, casas) é recomendado para evitar erros numéricos de máquina em operações com números decimais (float), retornando outro float
+# Operadores numericos aceitos no Python 3: + (soma ou concatenação de textos), - (subtração), * (multiplicação), / (quociente da divisão), % (resto da divisãoo) e ** (potência)
+# O método nativo round(numero, casas) é altamente recomendado para evitar erros de máquina em operações numéricas não inteiras (float), retornando outro float com o número estipulado de casas decimais
 taxa = round(porcentagem / 100, precisao)
 
 parte = round(valor * taxa, precisao)
