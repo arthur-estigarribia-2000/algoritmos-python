@@ -19,7 +19,7 @@ class ContaBancaria:
 	def __str__(self):
 		return f'Conta - CPF: {self.cpf} - Saldo: {self.saldo}'
 
-# Classe que herda atributos e métodos de outra
+# Classe-filha que herda atributos e métodos de outra classe-pai
 class Corrente(ContaBancaria):
 	def saca(self, valor):
 		self.saldo = round(self.saldo - float(valor), 2)
@@ -51,11 +51,11 @@ class Poupanca(ContaBancaria):
 			print("Saldo transferido com sucesso")
 
 # Criação de instância
-c1 = Corrente('Fulano de Tal', '000.000.000-00')
+c1 = Corrente("Fulano de Tal", "000.000.000-00")
 
 # Métodos da classe
 c1.deposita(3200.00)
 c1.saca(150.00)
 
 # Atributos da classe
-print(c1.saldo)
+print("Saldo: " + str(c1.saldo))
