@@ -1,25 +1,22 @@
-# Operações - Exemplo: porcentagem
+# Operações - Exemplo: aproveitamento de um time no Campeonato Brasileiro de Futebol
 
-# O método input(mensagem) consiste em obter os dados digitados no console (linha de comando)
-# É necessário converter o valor obtido para ponto flutuante decimal (tipo float) para efetuar operações numéricas usando float(valor)
-valor = float(input('Digite o valor de base (total ou inicial): '))
-porcentagem = float(input('Digite a porcentagem (taxa): '))
+# Entrada de dados
+# O método input(mensagem) permite a entrada de dados no terminal, a mensagem é um str (texto entre aspas duplas) e o método retorna str que deve ser convertido para int com str(variavel)
+vitorias = int(input("Digite o número de vitórias: "))
+empates = int(input("Digite o número de empates: "))
+derrotas = int(input("Digite o número de derrotas: "))
 
-# Variável auxiliar que será usada em breve
-precisao = 2
+# Processamento de dados
+# Operadores numéricos (int/float) aceitos em Python: + (soma), - (subtração), * (multiplicação), / (divisão), % (resto) e ** (potência)
+pontos = 3 * vitorias + 1 * empates + 0 * derrotas
+jogos = vitorias + empates + derrotas
+total = 3 * jogos
 
-# Operadores numericos aceitos no Python 3: + (soma ou concatenação de textos), - (subtração), * (multiplicação), / (quociente da divisão), % (resto da divisãoo) e ** (potência)
-# O método nativo round(numero, casas) é altamente recomendado para evitar erros de máquina em operações numéricas não inteiras (float), retornando outro float com o número estipulado de casas decimais
-taxa = round(porcentagem / 100, precisao)
+# É preciso converter int para float com float(variavel); os operadores em Python não aceitam tipos diferentes
+aproveitamento = (float(pontos) / float(total)) * 100.0
 
-parte = round(valor * taxa, precisao)
-
-# O comanod print(texto) retorna o dado no console
-# É necessário converter todos os valores para str na concatenação (operador + entre dois str)
-print('Parte: ' + str(parte))
-
-aumento = round(valor + parte, precisao)
-desconto = round(valor - parte, precisao)
-
-print('Aumento: ' + str(aumento))
-print('Desconto: ' + str(desconto))
+# Saída de dados
+# O método print(mensagem) efetua a saída de dados no terminal
+# O método round(decimal, casas) efetua o arredondamento para exibir com um número determinado (0-15) de casas decimais
+# O operador + entre duas str efetua a concatenação; é preciso converter float para str com str(variavel) para ser concatenado corretamente
+print("Aproveitamento: " + str(round(aproveitamento, 2)))
