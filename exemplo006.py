@@ -1,5 +1,4 @@
-# Classes
-# Exemplo: conta bancária 
+# Classes - Exemplo: conta bancária 
 
 # Classe
 class ContaBancaria:
