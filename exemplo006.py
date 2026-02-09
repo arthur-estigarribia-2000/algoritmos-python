@@ -59,3 +59,14 @@ c1.saca(150.00)
 
 # Atributos da classe
 print("Saldo: " + str(c1.saldo))
+
+# Prevenção de erros
+c2 = Poupanca("Sicrano de Tal", "999.999.999-99")
+
+try:
+	c2.deposita(1500.00)
+	c2.saca(2000.00)
+except:
+	print("Erro na operação.")
+else:
+	print("Operação bem-sucedida.")
