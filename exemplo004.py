@@ -1,30 +1,27 @@
-# Funções
-# Exemplo: média de notas escolares
+# Funções - Exemplo: calculadora de porcentagem
 
 # Estrutura de função def
 # Permite a reutilização de código que seria repetido muitas vezes
 # Pode ter vários parâmetros, mas apenas um retorno
 # Indentação obrigatória e cumulativa (com outras estruturas)
-def media(nota1, nota2, nota3):
-	soma = round(float(nota1) + float(nota2) + float(nota3), 1)
-	razao = round(float(soma) / 3, 1)
-	
-	# O método round(numero, casas) é recomendado para evitar erros de máquina numa operação decimal
-	# Pode ter de 0 a 15 casas decimais
-	return round(media, 1)
+def porcentagem(taxa, valor):
+	return (float(taxa) / 100) * float(valor)
 
-# Entrada de dados
-n1 = float(input('Digite a nota 1: '))
-n2 = float(input('Digite a nota 2: '))
-n3 = float(input('Digite a nota 3: '))
+def aumento(taxa, valor):
+	return float(valor) + float(porcentagem(taxa, valor))
 
-# Chamada do método já declarado (seu retorno será armazenado na variável m)
-m = media(n1, n2, n3)
+def desconto(taxa, valor):
+	return aumento(-float(taxa), float(valor))
 
-# Saída de dados
-print('Média: ' + str(m))
+v0 = float(input("Digite o valor inicial: "))
+p = float(input("Digite a taxa de variação: "))
 
-if m >= 7.0:
-	print('Aprovado. ')
-else:
-	print('Reprovado. ')
+# Chamada de método
+t = porcentagem(p, v)
+aum = aumento(p, v)
+des = desconto(p, v)
+
+# O método nativo round(numero, casas) usa o arredondamento para exibir o número decimal com um número especificado (0-15) de casas decimais
+print("Taxa: " + str(round(t, 2)))
+print("Aumento: " + str(round(aum, 2)))
+print("Dewsconto: " + str(round(des, 2)))
