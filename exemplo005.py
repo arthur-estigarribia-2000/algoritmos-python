@@ -1,5 +1,4 @@
-# Listas
-# Exemplo: registros de bandas
+# Listas - Exemplo: registros de bandas
 
 # Declaração de uma lista (array) com tipos homogêneos
 bandas = ["Linkin Park", "Evanescence", "Simple Plan", "Muse", "Avenged Sevenfold", "Green Day"]
@@ -34,6 +33,5 @@ print("Tamanho da lista inicial: " + str(len(bandas)))
 print("Tamanho da lista das bandas de nu-metal: " + str(len(numetal)))
 
 # Loop for, utilizado com arrays, onde a variável iteradora (i) assume cada elemento do array
-
 for i in numetal:
-  print("É banda de nu-metal: " + str(i) + "!")
+	print("É uma banda de nu-metal: " + str(i) + "!")
